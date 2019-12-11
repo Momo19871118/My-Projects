@@ -1,7 +1,17 @@
 import turtle
 import random
 import colorsys
-from playground.kool_functions import input_filter
+
+def input_filter():
+        while True:
+            try:
+                a = int(input(inp))
+                if a < mi or a > ma:
+                    print(message)
+                else:
+                    return a
+            except ValueError:
+                print(message)
 length = input_filter(2,15,"請問要畫幾條線(範圍:2~15):")
 dis = 100
 up = 300
