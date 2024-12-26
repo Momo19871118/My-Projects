@@ -12,7 +12,7 @@ def input_filter():
                     return a
             except ValueError:
                 print(message)
-length = input_filter(2,15,"請問要畫幾條線(範圍:2~15):")
+length = input_filter(2,15,"請問要畫幾條線(範圍:2~15):15")
 dis = 100
 up = 300
 lines = 15
@@ -142,7 +142,7 @@ brad.goto(int((length - 1) / 2 * dis), up * - 1)
 brad.hideturtle()
 #連線
 brad.pensize(3)
-yorn = input("要不要加速畫線程式動畫(要的話輸入Y或y，不要的話按Enter或任意輸入任何字):")
+yorn = input("要不要加速畫線程式動畫(要的話輸入Y或y，不要的話按Enter或任意輸入任何字):y")
 if yorn == "Y" or yorn == "y":
     brad.speed(0)
 else:
@@ -153,7 +153,7 @@ i = 1
 col = [i / length for i in range(1,length + 1)]
 random.shuffle(col)
 while i <= length:
-    inp = input_filter(1,length,f"選擇你要走的線(輸入阿拉伯數字1～{length}):")
+    inp = input_filter(1,length,f"選擇你要走的線(輸入阿拉伯數字1～{length}):1")
     if int(inp) not in done:
         done.append(int(inp))
         #設定顏色 讓顏色有一定的彩度
